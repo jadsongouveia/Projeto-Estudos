@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario 1</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            background-color: cornflowerblue;
+        }
+
+        form{
+            padding: 20px;
+            background-color: bisque;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Teste de Fórmulario</h1>
+    <form id="meuFormulario">
+        <h1>login</h1>
+        <label for="nome"><strong>Nome:</strong></label>
+        <input type="text" name="nome" id="nome" required>
+        <br>
+        <br>
+        <label for="email"><strong>Email:</strong></label>
+        <input type="email" name="email" id="email" required>
+        <br>
+        <br>
+        <label for="telefone"><strong>Telefone:</strong></label>
+        <input type="tel" name="telefone" id="telefone" placeholder="(xx) xxxx-xxxx" required>
+        <br><br>
+        <label for="mensagem"><strong>Mensagem:</strong></label>
+        <br>
+        <textarea name="mensagem" id="mensagem" cols="30" rows="10"></textarea>
+        <br>
+        <input type="submit" value="Enviar">
+    </form>
+    <script>
+        document.getElementById("meuFormulario").addEventListener("submit",function(event){
+            event.preventDefault();
+
+            var nome = document.getElementById("nome").value;
+            var email = document.getElementById("email").value;
+            var telefone = document.getElementById("telefone").value;
+
+            console.log("nome: " + nome);
+            console.log("email: " + email);
+            console.log("telefone: " + telefone);
+        })
+    </script>
+</body>
+</html>
