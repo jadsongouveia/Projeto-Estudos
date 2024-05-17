@@ -5,35 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>formulario 2</title>
     <style>
-        body{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: crimson;
-        }
+       body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 90vh;
+        background-color: brown;
+       }
 
-        form{
-            background-color: bisque;
-            padding: 20px;
-            border-radius: 10px;
-        }
+       form{
+        background-color: burlywood;
+        padding: 30px;
+        border-radius: 5px
+       }
 
-        form h1{
-            margin-top: 5px;
-        }
+       form h1{
+        margin-top: -10px;
+       }
     </style>
 </head>
 <body>
     <form id="meuFormulario">
-        <h1>Login</h1>
-        <label for="nome"><strong>Nome:</strong></label>
-        <input type="text" name="nome" id="nome" required>
+        <h1> Meu Formulario</h1>
+        <label for="nome"><strong>Nome:</strong></label><br>
+        <input type="text" name="nome" id="nome" required placeholder="Digite Seu Nome Aqui">
         <br><br>
-        <label for="email"><strong>Email:</strong></label>
-        <input type="email" name="email" id="email" required>
+        <label for="email"><strong>Email:</strong></label><br>
+        <input type="email" name="email" id="email" required placeholder="Digite Seu Email Aqui">
         <br><br>
-        <label for="telefone"><strong>Telefone:</strong></label>
+        <label for="telefone"><strong>Telefone:</strong></label><br>
         <input type="tel" name="telefone" id="telefone" required placeholder="(xx) xxxxx-xxxx">
         <br><br>
         <label for="mensagem"><strong>Mensagem:</strong></label>
@@ -42,18 +43,18 @@
         <br>
         <input type="submit" value="Enviar">
     </form>
+        
     <script>
-        const meuFormulario = document.getElementById("meuFormulario");
-        document.addEventListener("submit",function(event){
+       const formulario = document.getElementById("meuFormulario");formulario.addEventListener("submit",function(event){
             event.preventDefault();
 
-            var nome = document.getElementById("nome").value
-            var email = document.getElementById("email").value
-            var telefone = document.getElementById("telefone").value
+            var nome= document.getElementById("nome").value
+            var email= document.getElementById("email").value
+            var telefone= document.getElementById("telefone").value
 
-            console.log("Nome: " + nome)
-            console.log("Email: " + email)
-            console.log("Telefone: " + telefone)
+            console.log("nome: " + nome);
+            console.log("email: " + email);
+            console.log("telefone: " + telefone);
         })
     </script>
 </body>
