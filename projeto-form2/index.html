@@ -3,58 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>formulario 2</title>
+    <title>Formulario</title>
     <style>
-       body{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        height: 90vh;
-        background-color: brown;
-       }
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 90vh;
+            background-color: burlywood;
+           
+            
+        }
 
-       form{
-        background-color: burlywood;
-        padding: 30px;
-        border-radius: 5px
-       }
-
-       form h1{
-        margin-top: -10px;
-       }
+        form{
+            background-color: cadetblue;
+            text-align: center;
+            width: 250px;
+            height: 350px;
+            padding: 10px;
+        }
     </style>
 </head>
 <body>
     <form id="meuFormulario">
-        <h1> Meu Formulario</h1>
+        <h1>Formulario</h1>
         <label for="nome"><strong>Nome:</strong></label><br>
-        <input type="text" name="nome" id="nome" required placeholder="Digite Seu Nome Aqui">
+        <input type="text" name="nome" id="nome" required>
         <br><br>
         <label for="email"><strong>Email:</strong></label><br>
-        <input type="email" name="email" id="email" required placeholder="Digite Seu Email Aqui">
+        <input type="email" name="email" id="email" required>
         <br><br>
-        <label for="telefone"><strong>Telefone:</strong></label><br>
-        <input type="tel" name="telefone" id="telefone" required placeholder="(xx) xxxxx-xxxx">
+        <label for="telefone"><strong>telefone:</strong></label><br>
+        <input type="tel" name="telefone" id="telefone" required>
         <br><br>
-        <label for="mensagem"><strong>Mensagem:</strong></label>
-        <br>
-        <textarea name="mensagem" id="mensagem" cols="30" rows="10"></textarea>
-        <br>
+        <label for="data"><strong>Data De Nascimento:</strong></label><br>
+        <input type="date" name="data" id="data" required><br><br>
         <input type="submit" value="Enviar">
     </form>
-        
+
     <script>
-       const formulario = document.getElementById("meuFormulario");formulario.addEventListener("submit",function(event){
+        const formulario = document.getElementById("meuFormulario")
+        formulario.addEventListener("submit",function(event){
             event.preventDefault();
 
-            var nome= document.getElementById("nome").value
-            var email= document.getElementById("email").value
-            var telefone= document.getElementById("telefone").value
+            var nome = document.getElementById("nome").value 
+            var email =document.getElementById("email").value
+            var telefone = document.getElementById("telefone").value
+            var data = document.getElementById("data").value
 
-            console.log("nome: " + nome);
-            console.log("email: " + email);
-            console.log("telefone: " + telefone);
+            console.log("Nome: " + nome)
+            console.log("Email: " + email)
+            console.log("Telefone: " + telefone)
+            console.log("Data De Nascimento: " + data)
+
         })
     </script>
 </body>

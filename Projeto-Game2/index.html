@@ -11,8 +11,8 @@
             border: 1px solid #000;
             background-color: #fff;
             position: absolute;
-            left: 0;
             top: 0;
+            left: 0;
         }
     </style>
     <script>
@@ -26,10 +26,10 @@
         var podeAndar=false
 
         function inicia(){
-            px=0
-            py=0
             dx=0
             dy=0
+            px=0
+            py=0
             vel=1
             obj=document.getElementById("dv1")
             document.addEventListener("keydown",teclaDw)
@@ -77,14 +77,13 @@
             if(podeAndar==false){
                 obj.style.backgroundColor = "#f00"
                 podeAndar=true
-            }else if(podeAndar==true){
+            }else{
                 obj.style.backgroundColor = "#fff"
                 podeAndar=false
             }
         }
 
-
-    window.addEventListener("load",inicia)
+        window.addEventListener("load",inicia)
     </script>
 </head>
 <body>
