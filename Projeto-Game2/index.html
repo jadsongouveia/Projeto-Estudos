@@ -3,18 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto Game</title>
+    <title>Game</title>
     <style>
         #dv1{
             width: 100px;
             height: 100px;
-            border: 1px solid #000;
+            border: 1px solid black;
             background-color: #fff;
             position: absolute;
-            top: 0;
             left: 0;
+            top: 0;
         }
     </style>
+</head>
+<body>
+    <div id="dv1"></div>
+
     <script>
         var dx;
         var dy;
@@ -23,13 +27,13 @@
         var vel;
         var obj;
         var tmp;
-        var podeAndar=false
+        var podeAndar=false;
 
         function inicia(){
-            dx=0
-            dy=0
             px=0
             py=0
+            dx=0
+            dy=0
             vel=1
             obj=document.getElementById("dv1")
             document.addEventListener("keydown",teclaDw)
@@ -54,8 +58,8 @@
         }
 
         function teclaUp(){
-            var tecla = event.keyCode
-                if(tecla==37){
+            tecla = event.keyCode
+            if(tecla==37){
                     dx=0
                 }else if(tecla==38){
                     dy=0
@@ -77,16 +81,13 @@
             if(podeAndar==false){
                 obj.style.backgroundColor = "#f00"
                 podeAndar=true
-            }else{
+            }else if(podeAndar==true){
                 obj.style.backgroundColor = "#fff"
                 podeAndar=false
             }
         }
 
-        window.addEventListener("load",inicia)
+        window.addEventListener("load", inicia)
     </script>
-</head>
-<body>
-    <div id="dv1"></div>
 </body>
 </html>

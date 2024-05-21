@@ -6,48 +6,49 @@
     <title>Formulario</title>
     <style>
         body{
+            background-color: coral;
             display: flex;
             align-items: center;
             justify-content: center;
+            flex-direction: column;
             height: 90vh;
-            background-color: burlywood;
-           
             
         }
 
         form{
-            background-color: cadetblue;
-            text-align: center;
             width: 250px;
             height: 350px;
-            padding: 10px;
+            padding: 20px;
+            
+            background-color: blanchedalmond;
+            
         }
     </style>
 </head>
 <body>
     <form id="meuFormulario">
-        <h1>Formulario</h1>
+        <h1>Meu Formulario</h1>
         <label for="nome"><strong>Nome:</strong></label><br>
-        <input type="text" name="nome" id="nome" required>
+        <input type="text" name="nome" id="nome" placeholder="Digite Seu Nome Aqui" required>
         <br><br>
         <label for="email"><strong>Email:</strong></label><br>
-        <input type="email" name="email" id="email" required>
+        <input type="email" name="email" id="email" placeholder="Digite Seu Email Aqui" required>
         <br><br>
-        <label for="telefone"><strong>telefone:</strong></label><br>
-        <input type="tel" name="telefone" id="telefone" required>
+        <label for="telefone"><strong>Telefone:</strong></label><br>
+        <input type="tel" name="telefone" id="telefone" placeholder="(xx) xxxxx-xxxx" required>
         <br><br>
-        <label for="data"><strong>Data De Nascimento:</strong></label><br>
-        <input type="date" name="data" id="data" required><br><br>
+        <label for="data"><strong>Data De Nascimento:</strong></label><br><br>
+        <input type="date" name="data" id="data" required>
+        <br><br>
         <input type="submit" value="Enviar">
     </form>
-
     <script>
-        const formulario = document.getElementById("meuFormulario")
-        formulario.addEventListener("submit",function(event){
+        const formulario = document.getElementById("meuFormulario");
+        formulario.addEventListener("submit", function(event){
             event.preventDefault();
 
-            var nome = document.getElementById("nome").value 
-            var email =document.getElementById("email").value
+            var nome = document.getElementById("nome").value
+            var email = document.getElementById("email").value
             var telefone = document.getElementById("telefone").value
             var data = document.getElementById("data").value
 
